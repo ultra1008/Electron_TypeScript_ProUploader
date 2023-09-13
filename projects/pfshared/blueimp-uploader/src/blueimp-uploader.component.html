@@ -1,0 +1,93 @@
+<form class="photo-upload-form" enctype="multipart/form-data" id="fileupload" method="POST">
+  <div #fileuploadContent><ng-content></ng-content></div>
+  <div *ngIf="!fileuploadContent.children.length">
+    <p>blueimp-uploader works</p>
+    <!-- Choose Size/Files -->
+    <!--<section class="choose-size-and-files pt-4 pb-4" ng-hide="$ctrl.uploadQueue.length">
+      <div class="content">
+        <div class="text-center pt-4">
+
+          <div class="choose-upload-size" ng-if="$ctrl.showChooseUploadSize">
+            <h6 translate>Uploader_ChooseTheSizeYouWantToUpload</h6>
+            <div class="photo-upload-sizes pt-4 pb-5">
+
+              <div class="upload-size-item option-card"
+                   ng-repeat="uploadSizeOption in $ctrl.uploadSizeOptions"
+                   ng-class="{'option-card--active': $ctrl.selectedUploadSizeOption.Value == uploadSizeOption.Value}"
+                   ng-click="$ctrl.resizeToClicked(uploadSizeOption)">
+
+                <div class="upload-size-item-content">
+                  <h4 translate>{{uploadSizeOption.Name}}</h4>
+                  <p><span translate>{{uploadSizeOption.Description}}</span><span class="details-spacer">&nbsp;</span><span class="details-break"><br /></span><span translate>{{uploadSizeOption.Details}}</span></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="choose-files" ng-class="{ 'no-upload-sizes': !$ctrl.showChooseUploadSize }">
+            <h6 translate>Uploader_SelectTheFilesYouWantToUpload</h6>
+            <span class="btn btn-primary fileinput-button" ng-class="{'disabled': $ctrl.isDisabled}">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+              <span translate>Uploader_AddPhotos</span>
+              <input accept="image/*,.heic" multiple id="file" name="file" type="file" ng-disabled="$ctrl.isDisabled">
+            </span>
+            <p class="waiting-for-photos-info">{{"Uploader_WaitingForPhotosInfo" | translate | sprintf:$ctrl.formattedMaxFileSize}}</p>
+          </div>
+
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Global Progress/Upload Queue -->
+    <section class="global-progress-and-upload-queue pb-3" *ngIf="uploadQueue.length > 0">
+      <div class="content">
+        <div class="text-left pt-4">
+
+          <!-- Global Progress -->
+          <!--<div class="progress-container">
+            <h6 class="pb-0 mb-0"><span translate>Uploader_Photos</span> : <span>{{$ctrl.uploadSummary.totalFiles}}</span></h6>
+            <h6><span translate>Uploader_TimeRemaining</span> : <span>{{$ctrl.uploadSummary.timeRemaining | formatTime}}</span></h6>
+            <div class="command-buttons">
+              <div class="btn btn-default btn-responsive" ng-click="$ctrl.startUploadClicked()" ng-if="$ctrl.showStartUploadButton">
+                <span class="caption" translate>Uploader_StartUpload</span>
+              </div>
+              <div class="btn btn-default btn-responsive" ng-click="$ctrl.cancelUploadClicked()">
+                <span class="caption" translate>Uploader_CancelUpload</span>
+              </div>
+            </div>
+          </div>-->
+
+          <!-- Upload Queue -->
+          <!--<div class="upload-queue pt-2">
+            <div class="w-100 d-flex justify-content-center align-items-center flex-wrap">
+              <div class="preview-card" ng-repeat="file in $ctrl.uploadQueue">
+                <div class="card-white">
+                  <div class="preview-image" blueimp-photo-uploader-preview="file.preview"></div>
+                  <div class="right-card">
+                    <h6>{{::file.name}}</h6>
+                    <p>{{::file.size | formatFilesize}}</p>
+                    <div ng-if="!file.error">
+                      <div class="status">{{file.$$status | translate}}</div>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" ng-style="{'width': file.$$progress + '%'}"></div>
+                      </div>
+                    </div>
+                    <div ng-if="file.error || file.failed">
+                      <div class="status status--error">{{file.error | translate}}</div>
+                      <div class="command-buttons">
+                        <i class="fa fa-cloud-upload" ng-click="$ctrl.retryFileClicked(file)" translate-attr-title="Uploader_RetryUpload"></i>
+                        <i class="fa fa-times-circle" ng-click="$ctrl.removeFileClicked(file)" translate-attr-title="Uploader_CancelUpload"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+    </section>
+  </div>
+</form>
+

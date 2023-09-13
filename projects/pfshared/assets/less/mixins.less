@@ -1,0 +1,86 @@
+﻿.border-radius(@radius) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.absolute(@top:0, @right:0, @bottom:0, @left:0) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    bottom: @bottom;
+    left: @left;
+}
+
+.flex() {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-flow(@flow){
+    display: flex;
+    -ms-flex-flow: @flow;
+    -webkit-flex-flow: @flow;
+    flex-flow: @flow;
+}
+
+.font-face(@name, @file) {
+    font-family: @name;
+    src: url("../fonts/@{file}.eot");
+    src: url("../fonts/@{file}.eot?#iefix") format("embedded-opentype"), 
+         url("../fonts/@{file}.woff2") format("woff2"),
+         url("../fonts/@{file}.woff") format("woff"),
+         url("../fonts/@{file}.ttf") format("trueType"),
+         url("../fonts/@{file}.svg#learning_curve_proregular") format("svg");
+}
+
+.no-select() {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+
+    /* No support for these yet, use at own risk */
+    user-select: none;          
+}
+
+.text-overflow(@overflow) {
+    -ms-text-overflow: @overflow;
+    -o-text-overflow: @overflow;
+    text-overflow: @overflow;
+}
+
+.top-right-corner(@color) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 32px 32px 0;
+    border-color: transparent @color transparent transparent;
+}
+
+.touch-action(@action) {
+    -ms-touch-action: @action;
+    touch-action: @action;
+}
+
+.scale (@factor) {
+    -webkit-transform: scale(@factor);
+    -moz-transform: scale(@factor);
+    -ms-transform: scale(@factor);
+    -o-transform: scale(@factor);
+    transform: scale(@factor);
+}
+
+.vertical-align() {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.word-wrap(@wordWrap: break-word) {
+    -ms-word-wrap: @wordWrap;
+    word-wrap: @wordWrap;
+}

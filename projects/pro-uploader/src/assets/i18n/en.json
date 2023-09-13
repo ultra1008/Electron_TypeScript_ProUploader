@@ -1,0 +1,75 @@
+{
+  "HOME": {
+    "WELCOME": "Welcome to the PRO Uploader"
+  },
+  "ORDERS": {
+    "BAG_NUMBER": "Bag #",
+    "CUSTOMER": "Customer",
+    "EMAIL": "Email",
+    "NEW_ORDER": "New Order",
+    "ORDER_DETAILS": {
+      "NEW_ORDER": "New Order"
+    },
+    "ORDER_NUMBER": "Order #",
+    "PENDING": "Pending:",
+    "PENDING_UPLOADS": {
+      "TITLE": "Orders to Process"
+    },
+    "RECENT": "Recent:",
+    "SEARCH": "search ...",
+    "TOKEN": "Token",
+    "TWIN_CHECK": "Twin Check",
+    "UPLOADING": "Uploading:",
+    "UPLOAD_ACTIVITY": {
+      "COLLECTIONS": "Collections",
+      "PHOTOS": "Photos",
+      "STATUS": "Status",
+      "TITLE": "Upload Activity",
+      "UPLOADED": "Uploaded"
+    }
+  },
+  "SETTINGS": {
+    "CLEAR_TEMPORARY_STORAGE": "Clear Temporary Storage",
+    "GENERAL": {
+      "DARK_MODE": "Dark Mode",
+      "HEADER": "General",
+      "LANGUAGE": "Language",
+      "MAX_AGE_DAYS": "Hide Upload Activity older than (days)",
+      "REFRESH_INTERVAL": "Order Refresh Interval (minutes)"
+    },
+    "LOGGING": {
+      "HEADER": "Logging",
+      "LOG_LEVEL": "Log Level",
+      "SERVER_LOG_LEVEL": "Server Log Level"
+    },
+    "STOREFILTER": {
+      "HEADER": "Store Filter",
+      "ORDERS_WITH_LOCATION": "Orders With a Store Location Set",
+      "ORDERS_WITHOUT_LOCATION": "Orders Without a Store Location Set",
+      "SHOW_ORDERS_WITHOUT_LOCATION": "Show Orders with No Store Location Specified",
+      "SHOW_ORDERS_FOR_ALL_LOCATIONS": "Show Orders for All Store Locations",
+      "SHOW_ORDERS_FOR_LOCATIONS": "Show Orders for the Specified Store Locations",
+      "HIDE_ORDERS_WITH_LOCATION": "Don't Show Orders with a Store Location Set"
+    },
+    "TITLE": "Settings",
+    "UPLOADING": {
+      "ACCEPTS": "Accepts",
+      "CONCURRENT_UPLOADS": "Concurrent Uploads",
+      "HEADER": "Uploading",
+      "MOCK_UPLOAD": "Mock Upload"
+    }
+  },
+  "UPLOADS": {
+    "SEARCH": "search ..."
+  },
+  "_": {
+    "ACTIONS": "Actions",
+    "AGE": "Age",
+    "DATE": "Date",
+    "LOGOUT": "Logout",
+    "ORDER": "Order",
+    "PRODUCT": "Product",
+    "QTY": "Qty",
+    "QUANTITY": "Quantity"
+  }
+}

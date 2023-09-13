@@ -1,0 +1,62 @@
+﻿@import "variables.less";
+
+.modal {
+    overflow: hidden;
+}
+
+.modal-dialog {
+    fieldset {
+        border: none;
+        padding: 0 1.4em 1.4em 1.4em;
+        margin: 0;
+    }
+
+    @media @phone {
+        margin: 0;
+
+        fieldset {
+            border: none;
+            padding: 0 10px 10px 10px;
+            margin: 0;
+        }
+    }
+}
+
+.modal-content {
+    .border-radius(@border-radius-lg);
+
+    .modal-header {
+        border: none;
+        padding: 0 20px;
+
+        @media @phone {
+            padding: 0 10px;
+        }
+    }
+
+    .modal-body {
+        font-size: 16px;
+        padding: 0 20px;
+
+        @media @phone {
+            padding: 0 10px;
+        }
+    }
+
+    .modal-footer {
+        border: none;
+        padding: 20px 20px;
+        margin: 0;
+
+        @media @phone {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.modal-backdrop {
+}
+
+.has-switch span, .has-switch label {
+    padding: 4px;
+}

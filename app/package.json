@@ -1,0 +1,14 @@
+{
+  "author": {
+    "email": "support@photofinale.com",
+    "name": "Photo Finale, Inc."
+  },
+  "dependencies": {
+    "image-size": "^1.0.2"
+  },
+  "description": "Photo Finale PRO Uploader",
+  "main": "main.js",
+  "name": "pro-uploader",
+  "private": true,
+  "version": "1.0.0"
+}

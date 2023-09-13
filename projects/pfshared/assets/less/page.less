@@ -1,0 +1,105 @@
+﻿@import "variables.less";
+
+.page {
+    position: relative;
+    .clearfix();
+
+    .page-container {
+        border: none;
+        margin: 0;
+        .clearfix();
+
+        fieldset {
+            padding: 0;
+        }
+    }
+
+    .page-caption {
+        border: none;
+        padding: 10px 0;
+        .clearfix();
+
+        .fixed-caption {
+            .make-sm-column(10);
+            .make-sm-column-offset(1);
+            padding-left: 0;
+            padding-right: 0;
+            z-index: @zindex-page-caption-fixed !important;
+        }
+    }
+
+    .page-caption__content {
+        display: flex;
+        flex-direction: row;
+
+        .page-caption__text {
+            width: 100%;
+
+            .title {
+                font-size: 30px;
+                font-weight: 200;
+                text-align: left;
+                .text-overflow();
+
+                @media @phone {
+                    font-size: 25px;
+                    white-space: normal;
+                }
+            }
+        }
+
+        .page-caption__button {
+            flex: 1 0 auto;
+            margin-top: 4px;
+
+            @media @phone {
+                .btn {
+                    padding: 3px 12px;
+                }
+            }
+        }
+    }
+
+    .page-header {
+        .clearfix();
+        padding-bottom: 0;
+        margin: 0;
+        border: none;
+
+        .subtitle {
+            .clearfix();
+            font-size: 16px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .page-content {
+        .clearfix();
+    }
+
+    .page-footer {
+        .clearfix();
+    }
+
+    &.sticky-caption {
+        .page-container {
+            position: relative;
+        }
+
+        .page-caption {
+            background-color: @white;
+
+            &.scroll-to-fixed-fixed {
+                .box-shadow(0 3px 3px 0 rgba(0, 0, 0, 0.16));
+                left: 0 !important;
+                right: 0 !important;
+                padding: 12px 15px;
+                width: auto !important;
+                z-index: @zindex-page-caption-fixed !important;
+            }
+        }
+
+        .page-content {
+        }
+    }
+}

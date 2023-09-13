@@ -1,0 +1,24 @@
+﻿@import "variables.less";
+
+.popover-content {
+    min-width: 200px;
+    padding: 10px;
+}
+
+.popover-title {
+    font-weight: bold;
+
+    .badge {
+        margin-left: 5px;
+        padding: 3px;
+        display: none;
+    }
+}
+
+@media @tablet {
+    [uib-popover-popup].popover,
+    [uib-popover-html-popup].popover,
+    [uib-popover-template-popup].popover {
+        display: none !important;
+    }
+}

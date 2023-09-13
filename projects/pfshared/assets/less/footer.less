@@ -1,0 +1,73 @@
+﻿@import "variables.less";
+
+#footer {
+    background: @background;
+    color: @foreground-light;
+    font-size: 12px;
+    border-top: solid 1px @border-light;
+    margin-top: 10px;
+    .clearfix();
+
+    .col-left, .col-right {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .col-left {
+        justify-content: flex-start;
+    }
+
+    .col-right {
+        justify-content: flex-end;
+    }
+
+    .copyright {
+        h6 {
+            @media @iphone5 {
+                font-size: 11px;
+            }
+        }
+    }
+
+    .pricelist {
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+        }
+
+        padding-right: 10px;
+
+        h6 {
+        }
+    }
+
+    .terms {
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+        }
+
+        h6 {
+        }
+    }
+
+    .language-selector {
+        a {
+            &.btn {
+                text-transform: none;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li.active {
+                font-weight: bold;
+            }
+        }
+    }
+}

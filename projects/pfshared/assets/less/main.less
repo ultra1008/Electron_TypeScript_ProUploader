@@ -1,0 +1,59 @@
+﻿@import "variables.less";
+
+html, body  {
+    height: auto !important;
+    min-height: 100% !important;
+}
+
+.view {
+    height: 100%;
+}
+
+body {
+    background-color: @white;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+input, select, textarea, .form-control {
+    -moz-appearance: none;
+    outline: none;
+    box-shadow: none;
+    .placeholder(fade(@foreground, 50%));
+
+    &:hover, &:focus, &:active {
+        outline: none !important;
+        box-shadow: none !important;
+        border-color: @secondary-accent-color;
+        border-style: solid;
+    }
+}
+
+a {
+    color: @link-color;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: solid 1px @link-color !important;
+    outline-offset: -1px !important;
+}
+
+.view {
+    padding: 0;
+}
+
+.page-scroller {
+    .absolute();
+}
+
+.ng-cloak {
+    display: none;
+}

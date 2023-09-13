@@ -1,0 +1,135 @@
+﻿@import "variables.less";
+
+.abs-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    .translate(0, -50%);
+}
+
+.divider {
+    background: @border;
+    height: 1px;
+    margin: 2px 0 !important;
+    padding: 0 !important;
+}
+
+.has-switch {
+    .border-radius(@border-radius);
+
+    span.switch-left {
+        border-top-left-radius: @border-radius;
+        border-bottom-left-radius: @border-radius;
+    }
+
+    span.switch-right {
+        border-top-right-radius: @border-radius;
+        border-bottom-right-radius: @border-radius;
+    }
+}
+
+.line {
+    overflow: hidden;
+
+    &.center-align {
+        text-align: center;
+
+        &:before,
+        &:after {
+            border-top: 1px solid @gray-light;
+            border-bottom: 1px solid @gray-light;
+            content: "";
+            display: inline-block;
+            height: .1em;
+            position: relative;
+            vertical-align: middle;
+            width: 50%;
+            margin-bottom: .15em;
+        }
+
+        &:before {
+            right: 0.5em;
+            margin-left: -50%;
+        }
+
+        &:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+    }
+
+    &.left-align {
+        text-align: left;
+
+        &:after {
+            border-top: 1px solid @gray-light;
+            border-bottom: 1px solid @gray-light;
+            content: "";
+            display: inline-block;
+            height: .1em;
+            position: relative;
+            vertical-align: middle;
+            width: 100%;
+            margin-bottom: .15em;
+        }
+
+        &:after {
+            left: 0.5em;
+            margin-right: -50%;
+        }
+    }
+}
+
+.no-click {
+    cursor: wait;
+}
+
+/* hide up/down arrows ("spinners") on input fields marked type="number" */
+.no-spinners {
+    -moz-appearance: textfield;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.oblique-strikethrough {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 45%;
+        right: 0;
+        border-top: 2px solid;
+        border-color: crimson;
+        opacity: 0.7;
+        -webkit-transform: rotate(-8deg);
+        -moz-transform: rotate(-8deg);
+        -ms-transform: rotate(-8deg);
+        -o-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
+}
+
+.off-screen {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: none;
+    padding: 0;
+    left: -9999px;
+}
+
+.scroll-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.transparent {
+    .opacity(0);
+}

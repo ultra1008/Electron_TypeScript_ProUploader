@@ -1,0 +1,257 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "defaultProject": "pro-uploader",
+  "projects": {
+    "pro-uploader": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/pro-uploader",
+      "sourceRoot": "projects/pro-uploader/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/pro-uploader",
+            "index": "projects/pro-uploader/src/index.html",
+            "main": "projects/pro-uploader/src/main.ts",
+            "polyfills": "projects/pro-uploader/src/polyfills.ts",
+            "tsConfig": "projects/pro-uploader/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "preserveSymlinks": true,
+            "assets": [
+              "projects/pro-uploader/src/favicon.ico",
+              "projects/pro-uploader/src/assets"
+            ],
+            "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "projects/pro-uploader/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "@aws-amplify/core",
+              "@aws-crypto",
+              "@aws-crypto/crc32",
+              "@aws-crypto/sha256-browser",
+              "@aws-crypto/sha256-js",
+              "@aws-sdk/config-resolver",
+              "@aws-sdk/credential-provider-cognito-identity",
+              "@aws-sdk/eventstream-marshaller",
+              "@aws-sdk/eventstream-serde-browser",
+              "@aws-sdk/eventstream-serde-config-resolver",
+              "@aws-sdk/fetch-http-handler",
+              "@aws-sdk/hash-blob-browser",
+              "@aws-sdk/md5-js",
+              "@aws-sdk/middleware-apply-body-checksum",
+              "@aws-sdk/middleware-bucket-endpoint",
+              "@aws-sdk/middleware-content-length",
+              "@aws-sdk/middleware-expect-continue",
+              "@aws-sdk/middleware-host-header",
+              "@aws-sdk/middleware-location-constraint",
+              "@aws-sdk/middleware-retry",
+              "@aws-sdk/middleware-sdk-s3",
+              "@aws-sdk/middleware-serde",
+              "@aws-sdk/middleware-signing",
+              "@aws-sdk/middleware-ssec",
+              "@aws-sdk/middleware-user-agent",
+              "@aws-sdk/property-provider",
+              "@aws-sdk/protocol-http",
+              "@aws-sdk/querystring-builder",
+              "@aws-sdk/querystring-parser",
+              "@aws-sdk/s3-request-presigner",
+              "@aws-sdk/smithy-client",
+              "@aws-sdk/url-parser-browser",
+              "@aws-sdk/url-parser-node",
+              "@aws-sdk/util-buffer-from",
+              "@aws-sdk/util-create-request",
+              "@aws-sdk/util-format-url",
+              "@aws-sdk/util-uri-escape",
+              "@aws-sdk/util-utf8-browser",
+              "@aws-sdk/util-utf8-node",
+              "@aws-sdk/xml-builder",
+              "axios",
+              "aws-sdk",
+              "buffer",
+              "camelcase-keys",
+              "crypto-js",
+              "crypto-js/hmac-sha256",
+              "crypto-js/lib-typedarrays",
+              "crypto",
+              "fast-xml-parser",
+              "isomorphic-unfetch",
+              "js-cookie",
+              "lodash",
+              "path",
+              "ulid",
+              "url",
+              "uuid",
+              "zen-observable",
+              "zen-push"
+            ]
+          },
+          "configurations": {
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "9mb",
+                  "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/pro-uploader/src/environments/environment.ts",
+                  "with": "projects/pro-uploader/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "sandbox": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "9mb",
+                  "maximumError": "10mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/pro-uploader/src/environments/environment.ts",
+                  "with": "projects/pro-uploader/src/environments/environment.sandbox.ts"
+                }
+              ],
+              "outputHashing": "all"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "pro-uploader:build:development"
+            },
+            "production": {
+              "browserTarget": "pro-uploader:build:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "pro-uploader:build"
+          }
+        }
+      }
+    },
+    "pfshared": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "inlineTemplate": true,
+          "inlineStyle": true,
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/pfshared",
+      "sourceRoot": "projects/pfshared/src",
+      "prefix": "pfshared",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pfshared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pfshared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pfshared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        }
+      }
+    }
+  }
+}

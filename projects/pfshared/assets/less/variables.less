@@ -1,0 +1,99 @@
+﻿@import "../../../../node_modules/bootstrap/less/mixins";
+@import "../../../../node_modules/bootstrap/less/variables";
+@import "mixins.less";
+@import "zindex.less";
+
+@media-xs: 480px;
+@media-sm: 768px;
+@media-md: 992px;
+@media-lg: 1200px;
+
+// fancy media queries (https://stackoverflow.com/a/15842048/4872393)
+@phone: ~"only screen and (max-width: @{media-xs})";
+@tablet: ~"only screen and (max-width: @{media-sm})";
+@tablet-landscape: ~"only screen and (max-width: 1024px)";
+@desktop: ~"only screen and (min-width: @{media-md})";
+@desktop-large: ~"only screen and (min-width: @{media-lg})";
+
+@iphone5: ~"only screen and (max-width: 320px)";
+@iphone5-landscape: ~"only screen and (max-width: 568px) and (orientation: landscape)";
+
+@iphone6: ~"only screen and (max-width: 375px)";
+@iphone6-landscape: ~"only screen and (max-width: 667px) and (orientation: landscape)";
+
+@iphone6-plus: ~"only screen and (max-width: 414px)";
+@iphone6-plus-landscape: ~"only screen and (max-width: 736px) and (orientation: landscape)";
+
+@ie11: ~"all and (-ms-high-contrast: none), (-ms-high-contrast: active)";
+
+// colors
+@white: #fff;
+@gray-lighter: #eee;
+@gray-light: #ccc;
+@gray: #555;
+@gray-dark: #333;
+@gray-darker: #222;
+@black: #000;
+
+@green: #17B243;
+@light-green: #00A600;
+
+@red: #AC193D;
+@light-red: #EA0020;
+
+@blue: #2672EC;
+@light-blue: #359DFB;
+@sky-blue: #094AB2;
+@light-sky-blue: #0A5BC4;
+@hilite-blue: #D0E5F9;
+
+@orange: #D24726;
+@light-orange: #DC572E;
+@bright-orange: #FF7300;
+@bright-orange-border: #d05e00;
+
+@teal: #008299;
+@light-teal: #00A0B1;
+
+@purple: #8C0095;
+@light-purple: #A700AE;
+@dark-purple: #5133AB;
+@light-dark-purple: #643EBF;
+
+@theme-color: #ffffff;
+@theme-text-color: #494949;
+@theme-border-color: #CCCCCC;
+@accent-color: #575757;
+@accent-text-color: #FFFFFF;
+@accent-border-color: @accent-color;
+@secondary-accent-color: #FF7300;
+@secondary-accent-text-color: #FFFFFF;
+@secondary-accent-border-color: @secondary-accent-color;
+
+@background: #FFFFFF;
+@background-active: @accent-color;
+@background-hover: fade(@foreground, 10%);
+@background-light: #F8F8F8;
+@background-dark: #494949;
+@background-dark-hover: #777;
+@background-dark-border: #777;
+@background-btn: #DDDDDD;
+@background-panel: #F3F3F3;
+@border: #CCCCCC;
+@border-light: #F3F3F3;
+@foreground: #494949;
+@foreground-active: @background-light;
+@foreground-btn: #494949;
+@foreground-light: #777;
+@foreground-lighter: #fff;
+@link-color: #428bca;
+@header-background: #FFFFFF;
+@header-foreground: @accent-color;
+
+// sizes
+@border-radius-sm: 0px;
+@border-radius: 0px;
+@border-radius-lg: 0px;
+
+// transitions
+@transition-btn: none; //background-color 0.3s 0s,color 0.3s 0s,border-color 0.3s 0s;

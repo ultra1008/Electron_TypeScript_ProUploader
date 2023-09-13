@@ -1,0 +1,15 @@
+{
+  "apiUrls": [
+    "https://api3-development.photofinale.com/",
+    "https://api3-development-1.photofinale.com/",
+    "https://api3-development-2.photofinale.com/",
+    "https://api3-development-3.photofinale.com/",
+    "https://api3-development-4.photofinale.com/",
+    "https://api3-development-5.photofinale.com/",
+    "https://api3-development-6.photofinale.com/",
+    "https://api3-development-7.photofinale.com/",
+    "https://api3-development-8.photofinale.com/",
+    "https://api3-development-9.photofinale.com/",
+    "https://api3-development-10.photofinale.com/"
+  ]
+}

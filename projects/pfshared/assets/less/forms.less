@@ -1,0 +1,67 @@
+﻿@import "variables.less";
+
+fieldset {
+    border: none;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    border: none;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+h3, h4, h5 {
+    text-transform: none;
+}
+
+.form-big {
+    &.form-horizontal {
+        .control-label {
+            padding-top: 9px;
+            font-size: 16px;
+
+            @media @phone {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .input-group-addon {
+        i.fa {
+            font-size: 26px;
+            width: 26px;
+
+            @media @phone {
+                font-size: 14px;
+                width: 14px;
+            }
+        }
+    }
+
+    input[type="tel"],
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select {
+        font-weight: bold;
+        font-size: 16px;
+        height: 40px;
+
+        @media @phone {
+            font-size: 14px;
+            height: 32px;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+﻿@import "variables.less";
+
+.sp-container {
+    border: solid 1px @border;
+    background-color: white;
+
+    .sp-palette-container {
+        .sp-palette {
+            .sp-thumb-el {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        .sp-palette-button-container {
+            margin-top: 5px;
+            margin-right: 10px;
+
+            button {
+                background: none;
+                border: none;
+                width: 30px;
+            }
+        }
+
+        .sp-palette-toggle:before {
+            font-family: FontAwesome;
+            content: "\f205";
+            font-size: 24px;
+        }
+    }
+
+    &.sp-palette-only {
+        .sp-palette-toggle:before {
+            font-family: FontAwesome;
+            content: "\f204";
+            font-size: 24px;
+        }
+    }
+}
+
+.sp-replacer {
+    background-color: white;
+}

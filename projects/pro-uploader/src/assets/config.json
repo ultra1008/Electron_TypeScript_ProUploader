@@ -1,0 +1,9 @@
+{
+  "apiUrls": ["https://localhost:8443/"],
+  "languages": [
+    {
+      "displayName": "English",
+      "value": "en"
+    }
+  ]
+}

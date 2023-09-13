@@ -1,0 +1,82 @@
+// Your variable overrides go here, e.g.:
+// $h1-font-size: 3rem;
+
+@import "~bootswatch/dist/darkly/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/darkly/bootswatch";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+body {
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+form.ng-invalid {
+  input.ng-dirty.ng-invalid, select.ng-dirty.ng-invalid, textarea.ng-dirty.ng-invalid {
+    border-left: 5px solid red;
+  }
+}
+
+td.text-overflow {
+  div {
+    max-height: 1.3em;
+    overflow: hidden;
+    position: relative;
+    color: transparent;
+
+    &::after {
+      content: attr(title);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+td.clickable {
+  > span, > div {
+    cursor: pointer;
+
+    &.disabled {
+      pointer-events: none;
+      cursor: no-drop;
+      opacity: .25;
+    }
+  }
+}
+
+.is-busy {
+  .is-busy-spinner {
+    @extend %fa-icon;
+    @extend .fa-solid;
+
+    margin-left: 5px;
+    animation: fa-spin 2s infinite linear;
+
+    &::before {
+      content: fa-content($fa-var-circle-notch);
+    }
+  }
+}
+
+.scrollable-table-container {
+  height: 100%;
+  position: relative;
+
+  .scrollable-table-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+  }
+}
